@@ -24,6 +24,7 @@ public class VerifyOTPActivity extends AppCompatActivity {
 
 private EditText inputCode1, inputCode2, inputCode3, inputCode4, inputCode5, inputCode6;
 private String verificationId;
+String countryCode = "+254";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +42,8 @@ setUpOtpInputs();
 final ProgressBar progressBar = findViewById(R.id.progressbar);
 final Button verifyBtn = findViewById(R.id.buttonVerify);
 verificationId = getIntent().getStringExtra("verificationId");
-textMobile.setText(getIntent().getStringExtra("mobile"));
+String phoneNumb = countryCode+ getIntent().getStringExtra("mobile");
+textMobile.setText(phoneNumb);
 verifyBtn.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
