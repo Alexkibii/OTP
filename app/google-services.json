@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "727216218649",
+    "project_id": "otp-verification-df6a5",
+    "storage_bucket": "otp-verification-df6a5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:727216218649:android:6d03ac5db81f48b8a78088",
+        "android_client_info": {
+          "package_name": "com.xelacm.otp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "727216218649-s6fhgvot1sake2ub83mr0ro7j8s3bnjt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.xelacm.otp",
+            "certificate_hash": "45a2e25491e46e428183d7df6a1f3f1617035d95"
+          }
+        },
+        {
+          "client_id": "727216218649-jhfdm5qsefqj0ar3ugjsumo08v3avk21.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDB1sS4Vw100VvGVdrOvDM-g2WMVZHH73A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "727216218649-jhfdm5qsefqj0ar3ugjsumo08v3avk21.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
