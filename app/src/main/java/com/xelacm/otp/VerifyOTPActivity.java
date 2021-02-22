@@ -3,6 +3,8 @@ package com.xelacm.otp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.content.IntentSender;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -42,7 +44,7 @@ setUpOtpInputs();
 final ProgressBar progressBar = findViewById(R.id.progressbar);
 final Button verifyBtn = findViewById(R.id.buttonVerify);
 verificationId = getIntent().getStringExtra("verificationId");
-String phoneNumb = countryCode+ getIntent().getStringExtra("mobile");
+String phoneNumb = countryCode + getIntent().getStringExtra("mobile");
 textMobile.setText(phoneNumb);
 verifyBtn.setOnClickListener(new View.OnClickListener() {
     @Override
@@ -72,9 +74,15 @@ if (verificationId !=  null){
             progressBar.setVisibility(View.GONE);
             verifyBtn.setVisibility(View.VISIBLE);
             if(task.isSuccessful()){
-                Toast.makeText(VerifyOTPActivity.this, "Verification passed", Toast.LENGTH_LONG).show();
+                 Intent intent = new Intent(VerifyOTPActivity.this, MainActivity.class);
+                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK| Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                 startActivity(intent);
+                //Toast.makeText(VerifyOTPActivity.this, "Verification passed", Toast.LENGTH_LONG).show();
             }else{
                 Toast.makeText(VerifyOTPActivity.this, "Invalid code", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(VerifyOTPActivity.this, SendOTPActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK| Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
             }
         }
     });

@@ -55,12 +55,7 @@ public class SendOTPActivity extends AppCompatActivity {
 
                                 @Override
                                 public void onVerificationCompleted(PhoneAuthCredential credential) {
-                                    // This callback will be invoked in two situations:
-                                    // 1 - Instant verification. In some cases the phone number can be instantly
-                                    //     verified without needing to send or enter a verification code.
-                                    // 2 - Auto-retrieval. On some devices Google Play services can automatically
-                                    //     detect the incoming verification SMS and perform verification without
-                                    //     user action.
+
                                     progressBar.setVisibility(View.GONE);
                                     buttonGetOTP.setVisibility(View.VISIBLE);
 
@@ -76,9 +71,7 @@ public class SendOTPActivity extends AppCompatActivity {
                                 @Override
                                 public void onCodeSent(@NonNull String verificationId,
                                                        @NonNull PhoneAuthProvider.ForceResendingToken token) {
-                                    // The SMS verification code has been sent to the provided phone number, we
-                                    // now need to ask the user to enter the code and then construct a credential
-                                    // by combining the code with a verification ID.
+
                                     progressBar.setVisibility(View.GONE);
                                     buttonGetOTP.setVisibility(View.VISIBLE);
 
